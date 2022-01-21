@@ -1,0 +1,30 @@
+Git
+-verziókövető rendszer
+-nyílt forráskódu
+-A fejlesztők felhasználják a saját gépükön és egy távoli szerveren tárolják projekt fejlait egy úgynevezett repositoryban (repo(tároló))
+-A fejlesztők a saját gépükön dolgoznak a projekten
+    -ezért gyors a verzió kezelő műveletek végrehajtása
+    -fejlesztés offline megy, nem zavarják más fejlesztők munkáját a projekt kapcsán
+-minden fejlesztő rendelkezik egy saját másolattal, ami tartalmazza a projekt fájlait és módosítási előzményeit
+-A git célja egy adott projekt mentése, kezelése
+-Nyomköveti a projektbem végzett módosításokat
+-ezeket a nyomonkövetett módosítások kerülnek tárolásra a projektben
+Fogalmak:
+    -Working directory: Adott projektről, annak könyvtáráról egy változatot, verziót, állapotot tartalmaz
+        -tisztának nevezzük, ha a fájlokban végzett összes módosítás végre lett hajtva(commit megtörtént)
+    -Snapshot : egy adott pillanatban a mappák, fájlok aktuális állapotát, tartalmát, verzióját jelenti
+    -Staged: azok a fájlok amelyek módosítva lettek és az állapotukról, verziójukról, tartalmukról snapshot készűlt
+    -Commit : az a folyamat, amely során a Git megjelölt fájlokról új verziót (commit) tárol a repo adatbázísában
+    modified: A fájl a legtóbbi commit óta módosult
+    unmodified: a fájl a legutóbbi commit óta nem módusult
+Hozzáférés alapján 2 repo fajta van:
+    -private: a repohoz csak olyan folhők férhetnek hozzá akinek ez meg lett engedve
+    -public: bárki hozzáférhet
+-A git a távoli szerverrel HTTPS vagy SSH kapcsolaton keresztül kommnikál
+Parancsok:
+    - git init  = lokális repot hoz létre a mappában
+    - git clone [URL] -remote = repot lemásolja a gépre
+    - git add [fájl] = módosult fájlt lehet a következő commithoz hozzáadni(tracked)
+    - git commit - m "Szöveg" = új verzió commit létrehozása a tracked fájlok alapján. A  -m "..." lehet a commitnak rövid leírást adni
+    - git push = a lokális repoban lévő commitokat feltölti a távoli (remote) repoba
+    - git pull = a távoli (remote) repoban lévő commitokat letölti és  alkalmazza a lokális repon
