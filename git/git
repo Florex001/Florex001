@@ -28,3 +28,6 @@ Parancsok:
     - git commit - m "Szöveg" = új verzió commit létrehozása a tracked fájlok alapján. A  -m "..." lehet a commitnak rövid leírást adni
     - git push = a lokális repoban lévő commitokat feltölti a távoli (remote) repoba
     - git pull = a távoli (remote) repoban lévő commitokat letölti és  alkalmazza a lokális repon
+
+
+niki
